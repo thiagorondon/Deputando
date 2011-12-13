@@ -1,0 +1,3 @@
+[submodule "root/static/bubbletree"]
+	path = root/static/bubbletree
+	url = https://github.com/okfn/bubbletree.git

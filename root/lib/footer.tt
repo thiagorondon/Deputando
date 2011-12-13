@@ -1,0 +1,59 @@
+<footer class="footer"> <div class="malha">
+	<div class="container margem">
+		<div class="row">
+
+			<div class="span4">
+				<p>Desenvolvido por</p>
+				<ul>
+					<li><a href="http://sao-paulo.pm.org" target="_blank"> São Paulo Perl Mongers</a></li>
+					<li><a href="http://www.opendatabr.org/" target="_blank">opendata-br</a></li>
+				</ul>
+			</div>
+
+			<div class="span4">
+				<p>Onde Acontece?</p>
+				<ul>
+					<li><a href="/">Página Principal</a></li>
+					<li><a href="/sobre">Sobre</a></li>
+					<li><a href="/contato">Contato</a></li>
+					<li><a href="/faq">FAQ</a></li>
+				</ul>
+			</div>
+
+			<div class="span4">
+				<p>Tópico</p>
+				<ul>
+					<li><a href="/seguranca">Segurança Pública</a></li>
+				</ul>
+			</div>
+
+
+			<div class="span4">
+			<p>
+				<a href="http://www.opendefinition.org/okd/">
+					<img src="http://assets.okfn.org/images/ok_buttons/od_80x15_blue.png" alt="Open Data">
+				</a>
+</p><p>
+					<a rel="license" href="http://creativecommons.org/licenses/by/3.0/br/"><img alt="Licença Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/br/80x15.png" /></a><br />este trabalho está sobre a licença <a rel="license" href="http://creativecommons.org/licenses/by/3.0/br/">Creative Commons Atribuição 3.0</a>
+</p>
+			</div>
+
+
+		</div>
+	</div>
+</div>
+</footer>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-27471549-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>

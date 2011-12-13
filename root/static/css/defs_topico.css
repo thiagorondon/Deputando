@@ -1,0 +1,78 @@
+div.sub_menu {
+	font-size: 30pt;
+	color: #333;
+	line-height: 30pt;
+}
+
+.nome_topico {
+	display:block;
+	color: #F68121;
+
+}
+
+div.graph
+{
+	width: 400px;
+	height: 300px;
+	float: left;
+	border: 1px dashed gainsboro;
+}
+
+
+div.graph
+{
+	width: 400px;
+	height: 300px;
+	float: left;
+	border: 1px dashed gainsboro;
+}
+
+#graficos label
+{
+	display: block;
+	margin-left: 400px;
+	padding-left: 1em;
+}
+
+#graficos ul
+{
+	font-size: 10pt;
+}
+
+#graficos ul li
+{
+	margin-bottom: 0.5em;
+}
+
+#graficos ul.options li
+{
+	list-style: none;
+	margin-bottom: 1em;
+}
+
+#graficos table {
+	width: auto!important;
+}
+
+#graficos ul li i
+{
+	color: #999;
+}
+
+#graficos table th, table td  {
+	padding:2px 2px 1px;
+	line-height: auto;
+}
+.indicadores p {
+	font-size: 17px;
+	line-height: 17px;
+	
+}
+
+
+#lines div.legend div,
+#lines div.legend table
+{
+	right: -210px!important;
+	
+}

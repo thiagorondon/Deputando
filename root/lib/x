@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Deputando !</title>
+    <meta name="description" content="">
+    <meta name="author" content="sao paulo.pm">
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+[%IF desenv%]
+<link rel="stylesheet/less" href="/static/css/bootstrap.less">
+<script src="/static/script/less-1.1.5.min.js"></script>
+[%ELSE%]
+<link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css" />
+[%END%]
+
+<link rel="stylesheet" type="text/css" href="/static/css/defs.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/defs_topico.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/maps.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/jquery.qtip.min.css" />
+
+<!--[if lte IE 8]><script language="javascript" type="text/javascript" src="/static/script/excanvas.min.js"></script><![endif]-->
+<script language="javascript" type="text/javascript" src="/static/script/jquery.js"></script>
+
+

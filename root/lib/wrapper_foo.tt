@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Deputando !</title>
+    <meta name="description" content="">
+    <meta name="author" content="sao paulo.pm">
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+[%IF desenv%]
+<link rel="stylesheet/less" href="/static/css/bootstrap.less">
+<script src="/static/script/less-1.1.5.min.js"></script>
+[%ELSE%]
+<link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css" />
+[%END%]
+
+<link rel="stylesheet" type="text/css" href="/static/css/defs.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/defs_topico.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/maps.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/jquery.qtip.min.css" />
+
+<!--[if lte IE 8]><script language="javascript" type="text/javascript" src="/static/script/excanvas.min.js"></script><![endif]-->
+<script language="javascript" type="text/javascript" src="/static/script/jquery.js"></script>
+
+<script type="text/javascript" src="/static/bubbletree/lib/jquery-1.5.2.min.js"></script>
+»·<script type="text/javascript" src="/static/bubbletree/lib/jquery.history.js"></script>
+»·<script type="text/javascript" src="/static/bubbletree/lib/raphael.js"></script>
+»·<script type="text/javascript" src="/static/bubbletree/lib/vis4.js"></script>
+»·<script type="text/javascript" src="/static/bubbletree/lib/Tween.js"></script>
+»·<script type="text/javascript" src="/static/bubbletree/build/bubbletree.js"></script>
+»·<script type="text/javascript" src="https://raw.github.com/okfn/openspendingjs/master/lib/aggregator.js"></script>»·
+»·<link rel="stylesheet" type="text/css" href="/static/bubbletree/build/bubbletree.css" />
+»·<script type="text/javascript" src="/static/bubbletree/styles/cofog.js"></script>
+
+<script type="text/javascript">
+       
+		$(function() {
+
+			
+			var data = {
+				label: 'Total',
+				amount: 100,
+				children: [
+					{ label: 'First child', amount: 30 },
+          { label: 'Second child', amount: 40 },
+
+          { label: 'Third child', amount: 30, color: '#ff3300',
+children: [ { label: 'Foo', amount: 20  }, { label: 'bar', amount: 10} ]
+          }
+				]
+			};
+			
+			new BubbleTree({
+				data: data,
+				container: '.bubbletree'
+			});
+			
+		});
+                                        
+</script>
+
+</head>
+<body>
+
+[% PROCESS header.tt %]
+<div class="container-fluid">
+	<div class="banners ">
+		<div class="row">
+			<div class="span4">
+        <h1>Deputando</h1>
+      </div>
+		</div>
+
+		</div>
+	</div>
+</div>
+
+<div class="container-fluid">
+
+	<div class="bubbletree-wrapper">
+		<div class="bubbletree"></div>
+	</div>
+
+</div>
+
+[% PROCESS footer.tt %]
+
+</body>
+</html>
