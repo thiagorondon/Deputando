@@ -515,7 +515,7 @@ foreach my $deputado ( @{ $ref->{deputado} } ) {
 
     $dep->{titular} = 0;
     $dep->{suplente} = 0;
-    warn $nome;
+    # warn $nome;
     if ( $deputado->{comissoes}->{titular}->{comissao} ) {
 
       if ( ref($deputado->{comissoes}->{titular}->{comissao}) eq 'ARRAY' ) {
@@ -552,13 +552,12 @@ foreach my $deputado ( @{ $ref->{deputado} } ) {
 
     }
 
-    $tree{ $deputado->{partido} }{ $deputado->{uf} }{$nome} = $dep;
+    $tree{ $deputado->{partido} }{ $deputado->{uf} }{$nome} = $dep || 1;
 }
-
-my $total_deputados = 0;
-foreach my $children ( keys %tree ) {
-    $total_deputados += keys $tree{$children};
-}
+my $total_deputados = 513;
+#foreach my $children ( keys %tree ) {
+#    $total_deputados += keys $tree{$children};
+#}
 
 print <<EOF;
 var data = {
