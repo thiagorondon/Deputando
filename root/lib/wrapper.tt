@@ -5,8 +5,8 @@
     <title>Deputando ...</title>
     <meta name="description" content="">
     <meta name="author" content="sao paulo.pm">
-
-	<script type="text/javascript" src="/static/bubbletree/lib/jquery-1.5.2.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css" />    
+  <script type="text/javascript" src="/static/bubbletree/lib/jquery-1.5.2.min.js"></script>
 	<script type="text/javascript" src="/static/bubbletree/lib/jquery.history.js"></script>
 	<script type="text/javascript" src="/static/bubbletree/lib/raphael.js"></script>
 	<script type="text/javascript" src="/static/bubbletree/lib/vis4.js"></script>
@@ -15,7 +15,9 @@
 	<script type="text/javascript" src="https://raw.github.com/okfn/openspendingjs/master/lib/aggregator.js"></script>	
 	<link rel="stylesheet" type="text/css" href="/static/bubbletree/build/bubbletree.css" />
 	<script type="text/javascript" src="/static/bubbletree/styles/cofog.js"></script>
-	
+
+  <link rel="stylesheet" type="text/css" href="/static/css/deffs.css" />
+
 	
 	<script type="text/javascript">
        
@@ -34,6 +36,17 @@
 	</script>
 </head>
 <body>
+
+<div class="topbar">
+    <div class="topbar-inner">
+        <div class="container-fluid">
+              <a class="brand" href="http://opendatabr.org/" target="_blank">opendata-br</a>
+        </div>
+    </div>
+</div>
+
+
+
 	<div class="bubbletree-wrapper">
 		<div class="bubbletree"></div>
   </div>

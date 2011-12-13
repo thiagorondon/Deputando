@@ -52,7 +52,7 @@ ol,
 ul,
 fieldset,
 form,
-label,
+labelt,
 legend,
 button,
 table,
@@ -599,7 +599,7 @@ form .clearfix:before, form .clearfix:after {
 form .clearfix:after {
   clear: both;
 }
-label,
+labelt,
 input,
 select,
 textarea {
@@ -608,7 +608,7 @@ textarea {
   font-weight: normal;
   line-height: normal;
 }
-label {
+labelt {
   padding-top: 6px;
   font-size: 13px;
   line-height: 18px;
@@ -671,7 +671,7 @@ select, input[type=file] {
   *height: auto;
   line-height: 27px;
   *margin-top: 4px;
-  /* For IE7, add top margin to align select with labels */
+  /* For IE7, add top margin to align select with labelts */
 
 }
 select[multiple] {
@@ -719,7 +719,7 @@ input[type=file]:focus, input[type=checkbox]:focus, select:focus {
   box-shadow: none;
   outline: 1px dotted #666;
 }
-form .clearfix.error > label, form .clearfix.error .help-block, form .clearfix.error .help-inline {
+form .clearfix.error > labelt, form .clearfix.error .help-block, form .clearfix.error .help-inline {
   color: #b94a48;
 }
 form .clearfix.error input, form .clearfix.error textarea {
@@ -737,7 +737,7 @@ form .clearfix.error .input-prepend .add-on, form .clearfix.error .input-append 
   background-color: #fce6e6;
   border-color: #b94a48;
 }
-form .clearfix.warning > label, form .clearfix.warning .help-block, form .clearfix.warning .help-inline {
+form .clearfix.warning > labelt, form .clearfix.warning .help-block, form .clearfix.warning .help-inline {
   color: #c09853;
 }
 form .clearfix.warning input, form .clearfix.warning textarea {
@@ -755,7 +755,7 @@ form .clearfix.warning .input-prepend .add-on, form .clearfix.warning .input-app
   background-color: #d2b877;
   border-color: #c09853;
 }
-form .clearfix.success > label, form .clearfix.success .help-block, form .clearfix.success .help-inline {
+form .clearfix.success > labelt, form .clearfix.success .help-block, form .clearfix.success .help-inline {
   color: #468847;
 }
 form .clearfix.success input, form .clearfix.success textarea {
@@ -1018,7 +1018,7 @@ textarea[readonly] {
   padding: 0;
   width: 100%;
 }
-.inputs-list label {
+.inputs-list labelt {
   display: block;
   float: none;
   width: auto;
@@ -1028,10 +1028,10 @@ textarea[readonly] {
   text-align: left;
   white-space: normal;
 }
-.inputs-list label strong {
+.inputs-list labelt strong {
   color: #808080;
 }
-.inputs-list label small {
+.inputs-list labelt small {
   font-size: 11px;
   font-weight: normal;
 }
@@ -1060,7 +1060,7 @@ textarea[readonly] {
 .form-stacked legend {
   padding-left: 0;
 }
-.form-stacked label {
+.form-stacked labelt {
   display: block;
   float: none;
   width: auto;
@@ -1081,7 +1081,7 @@ textarea[readonly] {
 .form-stacked .inputs-list li {
   padding-top: 0;
 }
-.form-stacked .inputs-list li label {
+.form-stacked .inputs-list li labelt {
   font-weight: normal;
   padding-top: 0;
 }
@@ -2404,7 +2404,7 @@ button.btn::-moz-focus-inner, input[type=submit].btn::-moz-focus-inner {
 .fade.in {
   opacity: 1;
 }
-.label {
+.labelt {
   padding: 1px 3px 2px;
   font-size: 9.75px;
   font-weight: bold;
@@ -2416,16 +2416,16 @@ button.btn::-moz-focus-inner, input[type=submit].btn::-moz-focus-inner {
   -moz-border-radius: 3px;
   border-radius: 3px;
 }
-.label.important {
+.labelt.important {
   background-color: #c43c35;
 }
-.label.warning {
+.labelt.warning {
   background-color: #f89406;
 }
-.label.success {
+.labelt.success {
   background-color: #46a546;
 }
-.label.notice {
+.labelt.notice {
   background-color: #62cffc;
 }
 .media-grid {
