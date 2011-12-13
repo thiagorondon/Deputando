@@ -536,8 +536,20 @@ foreach my $deputado ( @{ $ref->{deputado} } ) {
 
     if ( $deputado->{comissoes}->{suplente}->{comissao} ) {
 
-      $dep->{suplente} = ref($deputado->{comissoes}->{suplente}->{comissao}) eq 'ARRAY' ? 
-        scalar(@{$deputado->{comissoes}->{suplente}->{comissao}}) : 1;
+      if ( ref($deputado->{comissoes}->{suplente}->{comissao}) eq 'ARRAY' ) {
+    
+        $dep->{suplente} = scalar(@{$deputado->{comissoes}->{suplente}->{comissao}});
+        my @suplente_n;
+        foreach my $item (@{$deputado->{comissoes}->{suplente}->{comissao}}) {
+          push(@suplente_n, $item->{sigla});
+        }
+        $dep->{suplente_nomes} = \@suplente_n;
+
+      } else {
+        $dep->{suplente} = 1;
+        $dep->{suplente_nomes} = [ $deputado->{comissoes}->{suplente}->{comissao}->{sigla} ];
+      }
+
     }
 
     $tree{ $deputado->{partido} }{ $deputado->{uf} }{$nome} = $dep;
@@ -552,6 +564,7 @@ print <<EOF;
 var data = {
   label: 'Deputados',
   amount: $total_deputados,
+  color: '#000000',
   children: [
 EOF
 
@@ -580,15 +593,22 @@ foreach my $children ( keys %tree ) {
             print "\n\t\t\tchildren:[";
 
               if ($total_titular) {
-              print "{ \n\t\t\tlabel: 'titular', \n\t\t\tamount: $total_titular, color: '#$color',";
+              print "{ \n\t\t\tlabel: 'titular', \n\t\t\tamount: '$total_titular', color: '#$color',";
               print "\n\t\t\tchildren:[";
               foreach my $item (@{$tree{$children}{$children_uf}{$children_dep}{titular_nomes}}) {
-                print "{ \n\t\t\tlabel: '$item', \n\t\t\tamount: 1, color: '#$color',},";
+                print "{ \n\t\t\tlabel: '$item', \n\t\t\tamount: '1', color: '#$color',},";
               }
               print "],},";
               }
 
-              print "{ \n\t\t\tlabel: 'suplente', \n\t\t\tamount: $total_suplente, color: '#$color',},";# if $total_suplente;
+              if ($total_suplente) {
+              print "{ \n\t\t\tlabel: 'suplente', \n\t\t\tamount: '$total_suplente', color: '#$color',";
+              print "\n\t\t\tchildren:[";
+              foreach my $item (@{$tree{$children}{$children_uf}{$children_dep}{suplente_nomes}}) {
+                print "{ \n\t\t\tlabel: '$item', \n\t\t\tamount: '1', color: '#$color',},";
+              }
+              print "],},";
+              }
 
             print "],";
             print "\n\t\t\t},";
