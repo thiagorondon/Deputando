@@ -554,10 +554,12 @@ foreach my $deputado ( @{ $ref->{deputado} } ) {
 
     $tree{ $deputado->{partido} }{ $deputado->{uf} }{$nome} = $dep || 1;
 }
-my $total_deputados = 513;
-#foreach my $children ( keys %tree ) {
-#    $total_deputados += keys $tree{$children};
-#}
+my $total_deputados = 0;
+foreach my $children ( keys %tree ) {
+    foreach my $children_uf (keys %{$tree{$children}}) {
+        $total_deputados += keys %{$tree{$children}{$children_uf}};
+    }
+}
 
 print <<EOF;
 var data = {
@@ -568,7 +570,11 @@ var data = {
 EOF
 
 foreach my $children ( keys %tree ) {
-    my $partido_total = keys $tree{$children};
+    my $partido_total = 0;
+    foreach my $ch_dep (keys %{$tree{$children}}) {
+        $partido_total += keys $tree{$children}{$ch_dep};
+    }
+
     my $color         = &rand_color;
     print
       "{ \n\tlabel: '$children', \n\tamount: $partido_total, color: '#$color',";
